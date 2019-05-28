@@ -1,0 +1,29 @@
+   FONCTIONNELLE
+   les gammes a travailler touche / accord mineur /accord majeur / tout
+   difficulté  tempo lent, tempo moyen, tempo rapide
+   afficher les notes avec un intervalle de N millisecondes, avec un bouton lui permettant d'arrêter
+
+
+   TECHNIQUE
+   **** faire trois tableaux -> 1 contenant touche, 1 accord majeur, accord mineur et les stocker dans un service
+   faire un service avec getter qui retourne le BON tableau selectionne par le musicien
+
+   faire un formulaire ou l'utilisateur a le choix entre les TOUCHES a travailler et LA VITESSE DE TEMPO
+   faire un COMPONENT VIEW qui va afficher les notes ALEATOIREMENT et avec un intervalle de N millisecondes
+   TODO:
+    - Premierement la vue doit afficher seulement le TYPE D'EXO
+    - Secondement la vue doit afficher uniquement le TEMPO
+    - Bouton retour pour voir la vue TYPE D'EXO et valider pour commencer l'exercice
+      Challenge technique: Comment gerer l'affichage du formulaire techniquement ?
+    - Les datas du formulaire doivent être envoyés dans un SERVICE
+    - Récupérer les Bonnes valeur dans le COMPONENT VIEW (peut être passe par resolver)
+    - Faire la fonction Random pour affichage
+    - faire que le temp d'intervalle deviennent dynamique
+
+   faire une vue ou il y a la note et un bouton STOP pour arrêter l'exercice
+   mettre une pop-up pour confirmer l'arret
+   TODO:
+     - faire une fonction qui clear l'intervalle qi le musicien appuie sur PAUSE
+     - faire une fonction qui clear l'intervalle  et affiche popup de confirmmation qd le musicien appuie sur FINIR
+     - fonction PO PUP affichage confirmation annulation , si annuler rien se passe si confirmation TOUT RESET
+
