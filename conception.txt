@@ -9,7 +9,7 @@
    faire un service avec getter qui retourne le BON tableau selectionne par le musicien
 
    faire un formulaire ou l'utilisateur a le choix entre les TOUCHES a travailler et LA VITESSE DE TEMPO
-   faire un COMPONENT VIEW qui va afficher les notes ALEATOIREMENT et avec un intervalle de N millisecondes
+   *****faire un COMPONENT VIEW qui va afficher les notes ALEATOIREMENT et avec un intervalle de N millisecondes
    TODO:
     - Premierement la vue doit afficher seulement le TYPE D'EXO
     - Secondement la vue doit afficher uniquement le TEMPO
@@ -23,7 +23,7 @@
    faire une vue ou il y a la note et un bouton STOP pour arrêter l'exercice
    mettre une pop-up pour confirmer l'arret
    TODO:
-     - faire une fonction qui clear l'intervalle qi le musicien appuie sur PAUSE
+    ******* - faire une fonction qui clear l'intervalle qi le musicien appuie sur PAUSE
      - faire une fonction qui clear l'intervalle  et affiche popup de confirmmation qd le musicien appuie sur FINIR
      - fonction PO PUP affichage confirmation annulation , si annuler rien se passe si confirmation TOUT RESET
 

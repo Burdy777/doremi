@@ -2,4 +2,4 @@
   {{ note }}
 </h2>
 
-<a class="btn btn-primary btn-lg" (click)="stop()">STOP</a>
+<a class="btn btn-primary btn-lg" (click)="stop()">{{ !stoppedDisplay ? 'PAUSE' : 'PLAY' }}</a>

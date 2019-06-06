@@ -1,0 +1,11 @@
+<form [formGroup]="musicForm" (ngSubmit)="submit(musicForm.value)">
+<div>
+  <span *ngFor="let mod of modes['controls']; let i=index">
+    <input type="checkbox" [formControl]="mod"/>
+
+    <label> {{ mode[i]['touch']  }}</label>
+  </span>
+</div>
+<button type="submit">Valider</button>
+</form>
+

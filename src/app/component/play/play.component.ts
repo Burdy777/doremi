@@ -9,24 +9,34 @@ import { ExerciceService } from 'src/app/exercice.service';
 export class PlayComponent implements OnInit {
 note: string = 'Prêt ?';
 notes;
-timeRef;
+stoppedDisplay: boolean = false;
+timeRef: any = null;
+time: number;
+
 constructor( public exerciceService: ExerciceService) { }
-
   ngOnInit() {
-    this.notes = this.exerciceService.theMineurTouchs;
-    this.timeRef = window.setInterval(() => this.random(this.exerciceService.theMineurTouchs.length), 2000);
+    // en fonction des donne recupere des formulaire
+    this.time = 3000;
 
+    this.notes = this.exerciceService.theMineurTouchs;
+    this.timeRef = window.setInterval(() => this.random(this.exerciceService.theMineurTouchs.length), this.time);
   }
 
   private random(max: number) {
       let index;
       index = Math.floor(Math.random() * Math.floor(max));
       this.note = this.notes[index];
+
   }
 
-
   stop() {
-    window.clearInterval(this.timeRef);
+    if (!this.stoppedDisplay)  {
+      window.clearInterval(this.timeRef);
+      this.timeRef = null;
+    } else {
+      this.timeRef = window.setInterval(() => this.random(this.exerciceService.theMineurTouchs.length), this.time);
+    }
+    this.stoppedDisplay = !this.stoppedDisplay;
   }
 
   quit() {
