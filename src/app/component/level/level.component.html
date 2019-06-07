@@ -2,10 +2,9 @@
 <div>
   <span *ngFor="let mod of modes['controls']; let i=index">
     <input type="checkbox" [formControl]="mod"/>
-
     <label> {{ mode[i]['touch']  }}</label>
   </span>
 </div>
-<button type="submit">Valider</button>
+<button type="submit" [disabled]="musicForm.invalid">Valider</button>
 </form>
 

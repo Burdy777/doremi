@@ -8,9 +8,13 @@ import { ExerciceService } from 'src/app/exercice.service';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ex: ExerciceService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.ex.BehaviorSubject.subscribe((v) => {
+      console.log(v);
+    });
+  }
 
 
 

@@ -1,3 +1,15 @@
-<p>
-  tempo works!
-</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  <div>
+    <span *ngFor="let tim of times">
+      <label>
+        {{ tim }}
+        <input type="radio" [value]="tim" name="time" formControlName="time"/>
+      </label>
+    </span>
+  </div>
+  <button type="submit" style="background: red" (click)="back()">Retour</button>
+  <button type="submit">Valider</button>
+
+  </form>
+  {{ form.value | json }}
+
